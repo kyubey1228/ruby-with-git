@@ -1,9 +1,12 @@
 # キーがシンボルなら新しいハッシュ記法に変換する
-hash = {
-  :age => 24,
-  :age => "arai",
-  gender: :female
-}
+hash = 
+  <<~TEXT
+  {
+    :age => 24,
+    :name => "arai",
+    gender: :female
+  }
+  TEXT
 
 # hash = {
 #   age: 24,
@@ -12,6 +15,7 @@ hash = {
 # } となればオッケー
 
 def convert_hash_syntax(old_syntax)
-  # 何もしない
-  old_syntax
+  old_syntax.gsub(/:(\w+)(\s*)=>(\s*)/) do
+    "#{Regexp.last_match(1)}: "
+  end
 end

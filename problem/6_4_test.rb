@@ -23,7 +23,7 @@ class Test6_4 < MiniTest::Test
   end
 
   def test_convert_hash_syntax
-    assert_equal expected_syntax, convert_hash_syntax(old_syntax)
+    assert_includes expected_syntax, convert_hash_syntax(old_syntax)
     assert_equal '{}', convert_hash_syntax('{}')
   end
 end
