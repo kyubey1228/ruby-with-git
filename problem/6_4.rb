@@ -1,7 +1,7 @@
 # キーがシンボルなら新しいハッシュ記法に変換する
 hash = {
-  "age" => 24,
-  "name" => "arai",
+  :age => 24,
+  :age => "arai",
   gender: :female
 }
 
