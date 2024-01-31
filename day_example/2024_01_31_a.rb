@@ -1,19 +1,16 @@
-# Vehicle という名前の基底クラスを作成してください。
-# このクラスに move メソッドを定義し、"Vehicle is moving" と出力するようにしてください。
-# Car という名前で Vehicle クラスを継承したサブクラスを作成してください。
-# Car クラスに honk メソッドを追加し、"Car honks: Beep beep!" と出力するようにしてください。
+# 課題 1: 基本的な継承
+# 目的: 基本的な継承の理解
+# 課題内容: Vehicle というスーパークラスを作成し、Car と Bike という2つのサブクラスを作成してください。
+# Vehicle には move メソッドがあり、Car と Bike はこのメソッドを継承します。
 
 class Vehicle
-  def self.move
-    "Vehicle is moving"
+  def move
+    puts "moveeee"
   end
 end
 
 class Car < Vehicle
-  def self.honk
-    "Car honks: Beep beep"
-  end
 end
 
-puts Vehicle.move
-puts Car.honk
+class Bike < Vehicle
+end
