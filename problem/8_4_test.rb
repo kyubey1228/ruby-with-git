@@ -2,13 +2,9 @@ require 'minitest/autorun'
 require_relative '8_4'
 
 class RaibowableTest < Minitest::Test
-  def test_rainbow
-    assert Rainbowable
-  end
-
   def setup
     String.include Rainbowable
-    Array.include Raibowable
+    Array.include Rainbowable
   end
 
   def test_rainbow
